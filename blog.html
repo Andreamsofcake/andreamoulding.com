@@ -114,11 +114,15 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <h4>Learning Blog</h4>
-                <h6>Journal Entry 2</h6>
-
-                <p>I was messing around with Inheritance. What I found out by playing around with it is that inheritance completely overrides the previous attributes. This would be useful if all your objects have the same attributes and then one can add additional attributes to some objects individually. There must be a way to add attributes to lots of objects. Say I have objects 1 thru 100 and the all have an A and B as attributes. There must be a way to add attribute C to just even numbers. Also there should be a way to create an “if then.” If the answer to an attribute is X then ask Y and so on.
-                 </p>
+                <h1>Learning Blog</h1>
+                <div id="content"></div>
+                    <script>
+                      function handleResponse(response) {
+                        console.log(response);
+                        document.getElementById("content").innerHTML += "<h2>" + response.title + "</h2>" + "<h3>" + "Published" + " " + response.published + "<h3>" + response.content;
+                      }
+                    </script>
+                    <script src="https://www.googleapis.com/blogger/v3/blogs/8203865104810827569/posts/6093434148019313119?callback=handleResponse&key=AIzaSyBo_YXKxnCo2CgAX9AQpyY70nCxs5xA8xc"></script>
             </div>
         </div>
 
