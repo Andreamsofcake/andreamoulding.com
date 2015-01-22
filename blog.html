@@ -115,7 +115,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1>Learning Blog</h1>
-                <div id="content"></div>
+                <div class="jumbotron" id="content"></div>
                     <script src="js/moment/min/moment.min.js"></script>
                     <script>
                     function handleResponse(response) {
@@ -123,7 +123,7 @@
                       var posts = response.items;
                       posts.forEach(function(post){
                         var date = post.published;
-                      document.getElementById("content").innerHTML += "<h2>" + post.title + "</h2>" + "<h3>" + "Published" + " " + moment(date).format('MMM DD YYYY h:mmA') + "<h3>" + post.content;
+                      document.getElementById("content").innerHTML += "<h3>" + post.title + "</h3>" + "<h4>" + "Published" + " " + moment(date).format('MMM DD YYYY h:mmA') + "<h4>" + "<p>" + post.content + "</p>";
                       });
                     }
                     </script>
